@@ -5,14 +5,19 @@
 	<title>ck</title>
 	<style>
 	.header{
-		height: 20px;
+		/*height: 20px;*/
 		background-color: pink;
 	}
 	</style>
 </head>
 <body>
 	<div class="header">
-		
+		<h3>HTML中 input:file搭配 accept="image/*" accept="audio/*" accept="video/*" 遇到的问题及解决方法</h3>
+		<h4>1.web桌面端点击响应缓慢</h4>
+		<p>这种情况是因为"image/*"中包含的通配符导致效率低下，因为选择文件的时候需要去遍历所有的文件来找寻image,解决方法为</p>
+		<p>"image/png,image/jpeg,image/jpg"等</p>
+		<p>"audio/mp3,audio/ogg"等</p>
+		<p>"video/mp4,video/wmv"等</p>
 	</div>
 </body>
 </html>

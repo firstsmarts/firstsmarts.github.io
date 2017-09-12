@@ -6,12 +6,19 @@
 	<style>
 	.header{
 		/*height: 20px;*/
-		background-color: pink;
+		height: 500px;
+		background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		background-size: cover;
+		/*background-color: pink;*/
 	}
 	</style>
 </head>
 <body>
 	<div class="header">
+		
+	</div>
+	<div class="content">
 		<h3>HTML中 input:file搭配 accept="image/*" accept="audio/*" accept="video/*" 遇到的问题及解决方法</h3>
 		<h4>1.web桌面端点击响应缓慢</h4>
 		<p>这种情况是因为"image/*"中包含的通配符导致效率低下，因为选择文件的时候需要去遍历所有的文件来找寻image,解决方法为</p>

@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>ck</title>
-	<link rel="stylesheet" href="./css/reset.css">
-	<style>
-	.header{
-		/*height: 20px;*/
-		height: 500px;
-		background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
-		-webkit-background-size: cover;
-		background-size: cover;
-		/*background-color: pink;*/
-	}
-	</style>
+    <meta charset="UTF-8">
+    <title>ck</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+    .header {
+        /*height: 20px;*/
+        height: 500px;
+        background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        /*background-color: pink;*/
+    }
+    </style>
 </head>
+
 <body>
-	<div class="header">
-		
-	</div>
-	<div class="content">
-		<h3>HTML中 input:file搭配 accept="image/*" accept="audio/*" accept="video/*" 遇到的问题及解决方法</h3>
-		<h4>1.web桌面端点击响应缓慢</h4>
-		<p>这种情况是因为"image/*"中包含的通配符导致效率低下，因为选择文件的时候需要去遍历所有的文件来找寻image,解决方法为</p>
-		<p>"image/png,image/jpeg,image/jpg"等</p>
-		<p>"audio/mp3,audio/ogg"等</p>
-		<p>"video/mp4,video/wmv"等</p>
-		<h3>JS中 new Date('YYY-MM-DD')在ios微信下问题</h3>
-		<p>1.格式必须是YYYY-MM-DD 否则会报'invalid date' </p>
-		<p>2.如果存在时分秒 'YYYY-MM-DDT00:00:00'</p>
-	</div>
+    <div id="app">
+        <div class="header">
+        </div>
+        <div class="content">
+            <h3>HTML中 input:file搭配 accept="image/*" accept="audio/*" accept="video/*" 遇到的问题及解决方法</h3>
+            <h4>1.web桌面端点击响应缓慢</h4>
+            <p>这种情况是因为"image/*"中包含的通配符导致效率低下，因为选择文件的时候需要去遍历所有的文件来找寻image,解决方法为</p>
+            <p>"image/png,image/jpeg,image/jpg"等</p>
+            <p>"audio/mp3,audio/ogg"等</p>
+            <p>"video/mp4,video/wmv"等</p>
+            <h3>JS中 new Date('YYY-MM-DD')在ios微信下问题</h3>
+            <p>1.格式必须是YYYY-MM-DD 否则会报'invalid date' </p>
+            <p>2.如果存在时分秒 'YYYY-MM-DDT00:00:00'</p>
+        </div>
+    </div>
+    <script src="./js/vue.min.js"></script>
+    <script>
+    	
+    </script>
 </body>
+
 </html>

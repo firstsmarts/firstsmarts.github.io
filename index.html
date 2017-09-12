@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>ck</title>
+    <script src="./js/flexiable.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
     .header {
@@ -12,14 +14,108 @@
         background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
         -webkit-background-size: cover;
         background-size: cover;
+        padding-top: 0.8rem;
         /*background-color: pink;*/
+    }
+
+    .slogn {
+        color: #fff;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 15px;
+        letter-spacing: 0.05rem;
+        line-height: 26px;
+    }
+
+    .muletter {
+        transition: all 800ms;
+        display: inline-block;
+    }
+
+    .space {
+        margin-right: 4px;
+    }
+
+    .current {
+        -webkit-transform: rotateX(60deg);
+        color: yellow;
+        text-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    }
+
+    @media screen and (max-width: 500px) {
+        .slogn {
+            width: 80%;
+            font-size: 14px;
+        }
+        .header {
+            padding-top: 0.5rem;
+        }
+    }
+    .mainbox{
+        padding-right: 370px;
+        position: relative;
+        height: 300px;
+    }
+    .fixedside {
+        width: 350px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        height: 300px;
+        padding-left: 40px;
+        border-left: 1px solid #d4d4d4;
+        /*background: red;*/
+    }
+    .tip{
+        line-height: 38px;
+        font-size: 13px;
+        color: #666;
+    }
+    .search{
+        position: relative;
+    }
+    .search-input{
+        width: 100%;
+        height: 34px;
+        border-radius: 4px;
+        padding: 0 16px;
+        border: 1px solid #d4d4d4;
+    }
+    .search-input:focus{
+        border: 1px solid #5c8dde;
+    }
+    .searchbtn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 34px;
+        height: 34px;
+        background: url(http://ow3ssotds.bkt.clouddn.com/search.png) no-repeat center center;
+        -webkit-background-size: 16px;
+        background-size: 16px;
     }
     </style>
 </head>
 
 <body>
     <div id="app">
-        <div class="header">
+        <div class="header" :style="{height: bannerHeight}">
+            <p class="slogn">
+                <span class="muletter" :class="{'current':currentIndex == i,'space': item == ' '}" v-for="(item,i) in list">{{item}}</span>
+            </p>
+        </div>
+        <div class="mainbox">
+            <div class="fixedside">
+                <div class="searchbox">
+                    <p class="tip">搜索</p>
+                    <div class="search">
+                        <input class="search-input" placeholder="关键词..." type="text">
+                        <span class="searchbtn"></span>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <div class="content">
             <h3>HTML中 input:file搭配 accept="image/*" accept="audio/*" accept="video/*" 遇到的问题及解决方法</h3>
@@ -35,7 +131,32 @@
     </div>
     <script src="./js/vue.min.js"></script>
     <script>
-    	
+    // var wi = document.documentElement.clientWidth
+    var word = 'I MEET YOU 、 TRESURE YOU 、 LOVE YOU ，EVEN ，I MISS YOU ...'
+    var app = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                currentIndex: 1,
+                list: word.split('')
+            }
+        },
+        created: function() {
+            console.log(1)
+            var that = this
+            this.timer = setInterval(function() {
+                if (that.currentIndex == 40) {
+                    that.currentIndex = 0
+                }
+                that.currentIndex = that.currentIndex + 1
+            }, 800)
+        },
+        computed: {
+            bannerHeight: function() {
+                return 500 * document.documentElement.clientWidth / 1920 + 'px'
+            }
+        }
+    })
     </script>
 </body>
 

@@ -8,93 +8,100 @@
     <script src="./js/flexiable.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
-    .header {
-        /*height: 20px;*/
-        height: 500px;
-        background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
-        -webkit-background-size: cover;
-        background-size: cover;
-        padding-top: 0.8rem;
-        /*background-color: pink;*/
-    }
-
-    .slogn {
-        color: #fff;
-        width: 60%;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 15px;
-        letter-spacing: 0.05rem;
-        line-height: 26px;
-    }
-
-    .muletter {
-        transition: all 800ms;
-        display: inline-block;
-    }
-
-    .space {
-        margin-right: 4px;
-    }
-
-    .current {
-        -webkit-transform: rotateX(60deg);
-        color: yellow;
-        text-shadow: 0 0 10px rgba(255, 255, 255, .2);
-    }
-
-    @media screen and (max-width: 500px) {
-        .slogn {
-            width: 80%;
-            font-size: 14px;
-        }
         .header {
-            padding-top: 0.5rem;
+            /*height: 20px;*/
+            height: 500px;
+            background: url(http://ow3ssotds.bkt.clouddn.com/index_bg.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            background-size: cover;
+            padding-top: 0.8rem;
+            /*background-color: pink;*/
         }
-    }
-    .mainbox{
-        padding-right: 370px;
-        position: relative;
-        height: 300px;
-    }
-    .fixedside {
-        width: 350px;
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        height: 300px;
-        padding-left: 40px;
-        border-left: 1px solid #d4d4d4;
-        /*background: red;*/
-    }
-    .tip{
-        line-height: 38px;
-        font-size: 13px;
-        color: #666;
-    }
-    .search{
-        position: relative;
-    }
-    .search-input{
-        width: 100%;
-        height: 34px;
-        border-radius: 4px;
-        padding: 0 16px;
-        border: 1px solid #d4d4d4;
-    }
-    .search-input:focus{
-        border: 1px solid #5c8dde;
-    }
-    .searchbtn{
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 34px;
-        height: 34px;
-        background: url(http://ow3ssotds.bkt.clouddn.com/search.png) no-repeat center center;
-        -webkit-background-size: 16px;
-        background-size: 16px;
-    }
+
+        .slogn {
+            color: #fff;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 15px;
+            letter-spacing: 0.05rem;
+            line-height: 26px;
+        }
+
+        .muletter {
+            transition: all 800ms;
+            display: inline-block;
+        }
+
+        .space {
+            margin-right: 4px;
+        }
+
+        .current {
+            -webkit-transform: rotateX(60deg);
+            color: yellow;
+            text-shadow: 0 0 10px rgba(255, 255, 255, .2);
+        }
+
+        @media screen and (max-width: 500px) {
+            .slogn {
+                width: 80%;
+                font-size: 14px;
+            }
+            .header {
+                padding-top: 0.5rem;
+            }
+        }
+
+        .mainbox {
+            padding-right: 370px;
+            position: relative;
+            height: 300px;
+        }
+
+        .fixedside {
+            width: 350px;
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            height: 300px;
+            padding-left: 40px;
+            border-left: 1px solid #d4d4d4;
+            /*background: red;*/
+        }
+
+        .tip {
+            line-height: 38px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .search {
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 34px;
+            border-radius: 4px;
+            padding: 0 16px;
+            border: 1px solid #d4d4d4;
+        }
+
+        .search-input:focus {
+            border: 1px solid #5c8dde;
+        }
+
+        .searchbtn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 34px;
+            height: 34px;
+            background: url(http://ow3ssotds.bkt.clouddn.com/search.png) no-repeat center center;
+            -webkit-background-size: 16px;
+            background-size: 16px;
+        }
     </style>
 </head>
 
@@ -131,60 +138,64 @@
     </div>
     <script src="./js/vue.min.js"></script>
     <script>
-    // var wi = document.documentElement.clientWidth
-    var word = 'I MEET YOU , TREASURE YOU , LOVE YOU , EVEN , I MISS YOU ...'
-    var app = new Vue({
-        el: '#app',
-        data: function() {
-            return {
-                currentIndex: 1,
-                list: word.split(''),
-                key: ''
-            }
-        },
-        created: function() {
-            console.log(1)
-            var that = this
-            this.timer = setInterval(function() {
-                if (that.currentIndex == that.list.length) {
-                    that.currentIndex = 0
+        // var wi = document.documentElement.clientWidth
+        var word = 'I MEET YOU , TREASURE YOU , LOVE YOU , EVEN , I MISS YOU ...'
+        var app = new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    currentIndex: 1,
+                    list: word.split(''),
+                    key: ''
                 }
-                that.currentIndex = that.currentIndex + 1
-            }, 800)
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            },
+            created: function () {
+                console.log(1)
+                var that = this
+                this.timer = setInterval(function () {
+                    if (that.currentIndex == that.list.length) {
+                        that.currentIndex = 0
+                    }
+                    that.currentIndex = that.currentIndex + 1
+                }, 800)
 
-                ga('create', 'UA-118601119-1', 'firstsmarts.cn');
-                 ga('send', 'pageview');
-        },
-        methods: {
-            change:function(e){
-                // var 
-                // console.log(e.target.value.length - parseInt())
-            }
-        },
-        computed: {
-            bannerHeight: function() {
-                return 500 * document.documentElement.clientWidth / 1920 + 'px'
-            }
-        },
-        watch:{
-            key: function(val,old){
-                // console.log(val.length - parseInt(val).toString().length)
-                if (val.length - parseInt(val).toString().length > 3 || (parseInt(val).toString().length > 4  && parseInt(val) > 0)|| (parseInt(val) < 0 && parseInt(val).toString().length > 5) || parseInt(val) < -242 || parseInt(val) > 4999) {
-                    this.key = old
+            },
+            methods: {
+                change: function (e) {
+                    // var 
+                    // console.log(e.target.value.length - parseInt())
                 }
+            },
+            computed: {
+                bannerHeight: function () {
+                    return 500 * document.documentElement.clientWidth / 1920 + 'px'
+                }
+            },
+            watch: {
+                key: function (val, old) {
+                    // console.log(val.length - parseInt(val).toString().length)
+                    if (val.length - parseInt(val).toString().length > 3 || (parseInt(val).toString().length > 4 && parseInt(val) > 0) || (parseInt(val) < 0 && parseInt(val).toString().length > 5) || parseInt(val) < -242 || parseInt(val) > 4999) {
+                        this.key = old
+                    }
 
-                // {type:[15,12,12,12],type2: [123,123,12]}
+                    // {type:[15,12,12,12],type2: [123,123,12]}
+                }
             }
-        }
-    })
+        })
 
+            
+    </script>
 
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-118601119-1', 'firstsmarts.cn');
+        ga('send', 'pageview');
     </script>
 </body>
 

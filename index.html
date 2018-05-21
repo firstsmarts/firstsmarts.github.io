@@ -141,7 +141,7 @@
     <script src="./js/api.js"></script>
     <script>
         console.log(navigator.usb)
-        navigator.usb.requestDevice().then(function (device) {
+        navigator.usb.requestDevice({filter:[]}).then(function (device) {
                 // console.log(device);
             navigator.usb.getDevices().then(res => console.log(res))
         })

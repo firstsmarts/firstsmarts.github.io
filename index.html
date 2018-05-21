@@ -141,7 +141,9 @@
     <script src="./js/api.js"></script>
     <script>
         console.log(navigator.usb)
-        navigator.usb.getDevices().then(res => console.log(res))
+        window.onlod = () => {
+            navigator.usb.getDevices().then(res => console.log(res))
+        }
         // var wi = document.documentElement.clientWidth
         var word = 'I MEET YOU , TREASURE YOU , LOVE YOU , EVEN , I MISS YOU ...'
         var app = new Vue({

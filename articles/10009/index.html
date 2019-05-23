@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="music coding life love">
+    <meta name="keyword" content="前端,kingsoft,javascript,python">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        vue-router 学习笔记 - kidish的博客 | kidish&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>kidish</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        vue-router 学习笔记
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-11-08 11:42:34</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#kilimanjaro" title="kilimanjaro">kilimanjaro</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="Vue-Router-查漏补缺"><a href="#Vue-Router-查漏补缺" class="headerlink" title="Vue Router 查漏补缺"></a>Vue Router 查漏补缺</h3><p><a href="https://router.vuejs.org/zh/installation.html" target="_blank" rel="noopener">文档</a></p>
+<h4 id="一、-动态路由匹配"><a href="#一、-动态路由匹配" class="headerlink" title="一、 动态路由匹配"></a>一、 动态路由匹配</h4><p>！当使用路由参数时，例如从 <code>/user/foo</code> 导航到 <code>/user/bar</code>，<strong>原来的组件实例会被复用</strong>——这意味着组件的生命周期钩子不会再被调用，<br>So：想对路由参数的变化作出响应的话，可以<br>1）watch <code>$route</code> 对象<br>2）使用<code>beforeRouteUpdate</code>  <a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html" target="_blank" rel="noopener">导航守卫</a></p>
+<ul>
+<li>匹配优先级：同一个路径可以匹配多个路由，此时，匹配的优先级就按照路由的定义顺序——<strong>谁先定义的，谁的优先级就最高</strong><h4 id="二、-嵌套路由："><a href="#二、-嵌套路由：" class="headerlink" title="二、 嵌套路由："></a>二、 嵌套路由：</h4></li>
+</ul>
+<p>1）<code>&lt;router-view&gt;</code>渲染最高级路由匹配到的组件，不要是个组件都加<br>2）提供一个空的子路由，会被渲染出来<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/user/:id'</span>, <span class="attr">component</span>: User,</span><br><span class="line">      children: [</span><br><span class="line">        <span class="comment">// 当 /user/:id 匹配成功，</span></span><br><span class="line">        <span class="comment">// UserHome 会被渲染在 User 的 &lt;router-view&gt; 中</span></span><br><span class="line">        &#123; <span class="attr">path</span>: <span class="string">''</span>, <span class="attr">component</span>: UserHome &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ...其他子路由</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure></p>
+<h4 id="三、-声明式导航VS编程式导航"><a href="#三、-声明式导航VS编程式导航" class="headerlink" title="三、 声明式导航VS编程式导航"></a>三、 声明式导航VS编程式导航</h4><p>1）声明式：<code>&lt;router-link :to=&quot;...&quot;&gt;</code> <code>&lt;router-link :to=&quot;...&quot; replace&gt;</code><br>2）编程式：<code>router.push(...)</code> <code>router.replace(...)</code> <code>router.go(n)</code></p>
+<ul>
+<li><code>router.replace(...)</code> VS<code>router.push</code> ：唯一的不同就是，前者不会向 history 添加新记录，而是跟它的方法名一样 —— 替换掉当前的 history 记录</li>
+<li><code>router.go(n)</code>接受一个整数，在 history 记录中向前或者后退多少步</li>
+</ul>
+<p><code>router.push</code>方法的参数可以是一个字符串路径，或者一个描述地址的对象</p>
+<blockquote>
+<p><strong>如果提供了  <code>path</code>，<code>params</code>  会被忽略:</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userId = <span class="number">123</span></span><br><span class="line">router.push(&#123; <span class="attr">name</span>: <span class="string">'user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user/123</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">`/user/<span class="subst">$&#123;userId&#125;</span>`</span> &#125;) <span class="comment">// -&gt; /user/123</span></span><br><span class="line"><span class="comment">// 这里的 params 不生效</span></span><br><span class="line">router.push(&#123; <span class="attr">path</span>: <span class="string">'/user'</span>, <span class="attr">params</span>: &#123; userId &#125;&#125;) <span class="comment">// -&gt; /user</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>同样的规则也适用于 <code>router-link</code> 组件的 <code>to</code> 属性</p>
+</blockquote>
+<p><strong>！应习惯使用声明式，省了写点击事件和处理逻辑</strong></p>
+<h4 id="四、重定向"><a href="#四、重定向" class="headerlink" title="四、重定向"></a>四、重定向</h4><p>重定向”的意思是，当用户访问 <code>/a</code>时，URL 将会被替换成 <code>/b</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">routes: [</span><br><span class="line">  &#123; <span class="attr">path</span>: <span class="string">'/a'</span>, <span class="attr">redirect</span>: <span class="string">'/b'</span> &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
+<h4 id="五、导航守卫"><a href="#五、导航守卫" class="headerlink" title="五、导航守卫"></a>五、导航守卫</h4><p>导航守卫主要用来通过跳转或取消的方式来守卫导航<br>记住<strong>参数或查询的改变并不会触发进入/离开的导航守卫</strong>：可以通过<a href="https://router.vuejs.org/zh/guide/essentials/dynamic-matching.html#%E5%93%8D%E5%BA%94%E8%B7%AF%E7%94%B1%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%98%E5%8C%96" target="_blank" rel="noopener">观察  <code>$route</code>  对象</a>来应对这些变化，或使用 <code>beforeRouteUpdate</code> 的组件内守卫。</p>
+<ul>
+<li><strong>1）全局守卫</strong><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p><strong><code>next: Function</code></strong>: 一定要调用该方法来  <strong>resolve</strong>  这个钩子。执行效果依赖  <code>next</code>  方法的调用参数。</p>
+<ul>
+<li><strong><code>next()</code></strong>: 进行管道中的下一个钩子。如果全部钩子执行完了，则导航的状态就是  <strong>confirmed</strong>  (确认的)。  </li>
+<li><strong><code>next(false)</code></strong>: 中断当前的导航。如果浏览器的 URL 改变了 (可能是用户手动或者浏览器后退按钮)，那么 URL 地址会重置到  <code>from</code>  路由对应的地址。 </li>
+<li><strong><code>next(&#39;/&#39;)</code>  或者  <code>next({ path: &#39;/&#39; })</code></strong>: 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。你可以向  <code>next</code>  传递任意位置对象。 </li>
+<li><strong><code>next(error)</code></strong>: (2.4.0+) 如果传入  <code>next</code>  的参数是一个  <code>Error</code>  实例，则导航会被终止且该错误会被传递给  <a href="https://router.vuejs.org/zh/api/#router-onerror" target="_blank" rel="noopener"><code>router.onError()</code></a>  注册过的回调。<br><strong>确保要调用  <code>next</code>  方法，否则钩子就不会被 resolved。</strong></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>没有使用next方法，输出to 和 from的信息，但是路由不会跳转</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(to)</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="keyword">from</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用next()，正常跳转</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">	next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>next(false)，不会跳转</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">	next(<span class="literal">false</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>next(‘/intro’)，</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">	next(<span class="string">'/'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>  仅仅这么写会报错：<code>vue-router.esm.js?fe87:1905 RangeError: Maximum call stack size exceeded</code> <code>[vue-router] uncaught error during route navigation:</code></p>
+<p>  原因：next()直接跳转到to.path路径，没有再执行一遍beforeEach导航钩子，而next(‘/‘)这一种自己指定路径的，路由跳转的时候还执行一遍beforeEach导航钩子，所以出现死循环，会一直输出造成栈溢出<br>  解决：先利用<code>to.path</code>判断一下将要去的路由，分别处理如：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Router.beforeEach(<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(to.path  ==  <span class="string">'/'</span>)&#123;</span><br><span class="line">		next()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">		next(<span class="string">'/'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>  这样就能实现正确的跳转<br>  <strong>next(‘/‘)这种跳转可以用于处理登录跳转逻辑</strong></p>
+</li>
+<li><p><strong>2）全局解析守卫</strong></p>
+<p>  可以用 <code>router.beforeResolve</code> 注册一个全局守卫，和 <code>router.beforeEach</code> 类似<br><strong>区别：在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用</strong></p>
+</li>
+<li><p><strong>3）路由独享的守卫</strong><br>可以在路由配置上直接定义 <code>beforeEnter</code> 守卫，与全局前置守卫的方法参数一样</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	path:  <span class="string">'/intro'</span>,</span><br><span class="line">	name:  <span class="string">'Information'</span>,</span><br><span class="line">	component:  Information,</span><br><span class="line">	beforeEnter:<span class="function">(<span class="params">to,<span class="keyword">from</span>,next</span>)=&gt;</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(to)</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="keyword">from</span>)</span><br><span class="line">		next()</span><br><span class="line">	&#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>4）全局后置钩子</strong></p>
+<ul>
+<li>这些钩子不会接受 <code>next</code> 函数也不会改变导航本身：<code>router.afterEach((to, from) =&gt; { // ... })</code></li>
+</ul>
+</li>
+<li><p><strong>5）组件内的守卫</strong></p>
+<ul>
+<li><p><code>beforeRouteEnter</code></p>
+<ul>
+<li><strong><code>beforeRouteEnter</code> 守卫 </strong>不能<strong> 访问 <code>this</code></strong>，因为守卫在导航确认前被调用,因此即将登场的新组件还没被创建。但可以通过传一个回调给 <code>next</code>来访问组件实例，<strong><code>beforeRouteEnter</code> 是支持给 <code>next</code> 传递回调的唯一守卫</strong><br>在组件的与methods和data等平行的地方使用：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">beforeRouteEnter (to, <span class="keyword">from</span>, next) &#123;</span><br><span class="line">	next(<span class="function"><span class="params">vm</span>  =&gt;</span> &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(vm.dialogVisible)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>beforeRouteUpdate</code>  </p>
+<ul>
+<li>可以访问<code>this</code>，<strong>不支持</strong>传递回调，因为没有必要</li>
+</ul>
+</li>
+<li><code>beforeRouteLeave</code>：通常用来禁止用户在还未保存修改前突然离开<ul>
+<li>可以访问<code>this</code>，<strong>不支持</strong>传递回调，因为没有必要</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>6） 完整的导航解析流程</strong><a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%AF%BC%E8%88%AA%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B" target="_blank" rel="noopener">文档</a></p>
+</li>
+</ul>
+<h4 id="六、过渡动效"><a href="#六、过渡动效" class="headerlink" title="六、过渡动效"></a>六、过渡动效</h4><ul>
+<li><code>&lt;router-view&gt;</code> 是基本的动态组件，所以我们可以用 <code>&lt;transition&gt;</code> 组件给它添加一些过渡效果<h4 id="七、数据获取"><a href="#七、数据获取" class="headerlink" title="七、数据获取"></a>七、数据获取</h4></li>
+<li>1）导航完成之后获取：先完成导航，然后在接下来的组件生命周期钩子中获取数据。在数据获取期间显示“加载中”之类的指示</li>
+<li>2）导航完成之前获取：导航完成前，在路由进入的守卫中获取数据，在数据获取成功后执行导航。</li>
+</ul>
+<h4 id="八、-滚动行为"><a href="#八、-滚动行为" class="headerlink" title="八、 滚动行为"></a>八、 滚动行为</h4><ul>
+<li>vue-router可以自定义路由切换时页面如何滚动</li>
+<li>这个功能只在支持  <code>history.pushState</code>  的浏览器中可用   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scrollBehavior (to, <span class="keyword">from</span>, savedPosition) &#123;</span><br><span class="line">   <span class="keyword">return</span> &#123; <span class="attr">x</span>: <span class="number">0</span>, <span class="attr">y</span>: <span class="number">0</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="九、路由懒加载"><a href="#九、路由懒加载" class="headerlink" title="九、路由懒加载"></a>九、路由懒加载</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	path:  <span class="string">'/account/password'</span>,</span><br><span class="line">	name:  <span class="string">'Password'</span>,</span><br><span class="line">	component: <span class="function"><span class="params">()</span> =&gt;</span></span><br><span class="line">		<span class="keyword">import</span> (<span class="comment">/* webpackChunkName: "password" */</span>  <span class="string">'../components/password'</span>),</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>按照这种形式把某个路由下的所有组件都打包在同个异步块 (chunk) 中，便可以实现加载到相应模块时才加载相应的js<br>最后可以看到build出来的效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">                              Asset     Size         Chunks               Chunk Names</span><br><span class="line">static/js/1.30d7fd584322d8118003.js    8.07 kB       1  [emitted]         home</span><br><span class="line">static/js/2.2e83b87ec6e4631f040a.js    40.6 kB       2  [emitted]         intro</span><br><span class="line">static/js/3.3a4088c85a093777b888.js    3.87 kB       3  [emitted]         password                    </span><br><span class="line">static/js/4.62db8a2584adfea19a93.js  884 bytes       4  [emitted]         account</span><br><span class="line">static/js/5.103e7ab1dd6ce83e32b9.js    1.73 kB       5  [emitted]         manage</span><br></pre></td></tr></table></figure></p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/kidish-83">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1643945963">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/firstsmarts">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://kilimanjarol.github.io/">kilimanjarol</a></span>
+        <span>/</span>
+        
+        <span><a href="https://stackedit.io/">stackedit</a></span>
+        <span>/</span>
+        
+        <span><a href="https://knktc.com/">knktc</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://firstsmarts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

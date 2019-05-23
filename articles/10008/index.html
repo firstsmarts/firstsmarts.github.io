@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="music coding life love">
+    <meta name="keyword" content="前端,kingsoft,javascript,python">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        图标字体 - kidish的博客 | kidish&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>kidish</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        图标字体
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-11-08 11:36:34</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#kilimanjaro" title="kilimanjaro">kilimanjaro</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="图标字体制作（-font-face）"><a href="#图标字体制作（-font-face）" class="headerlink" title="图标字体制作（@font-face）"></a>图标字体制作（@font-face）</h3><h4 id="一、CSS3-font-face"><a href="#一、CSS3-font-face" class="headerlink" title="一、CSS3 @font-face"></a>一、CSS3 @font-face</h4><p>1）浏览器支持</p>
+<ul>
+<li>Internet Explorer 9 只支持 .eot 类型的字体, Firefox, Chrome, Safari, 和 Opera 支持 .ttf 与.otf 两种类型字体.</li>
+<li>Internet Explorer 8 及更早IE版本不支持@font-face 规则.</li>
+</ul>
+<p>2） 使用意义</p>
+<ul>
+<li>网站可以使用字体以外的预先选择“合法”字体</li>
+</ul>
+<p>3）使用语法</p>
+<ul>
+<li><p>定义</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">font-family</span>: myFirstFont;</span><br><span class="line">	<span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">'Sansation_Light.ttf'</span>)</span><br><span class="line">		,<span class="built_in">url</span>(<span class="string">'Sansation_Light.eot'</span>); <span class="comment">/* IE9 */</span></span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	 其余可选参数：</span></span><br><span class="line"><span class="comment">	 font-stretch（如何拉伸）、</span></span><br><span class="line"><span class="comment">	 font-style（字体样式）、</span></span><br><span class="line"><span class="comment">	 font-weight（粗细）、</span></span><br><span class="line"><span class="comment">	 unicode-range（字体支持Unicode字符的范围）</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="attribute">font-family</span>:myFirstFont;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>! font-family命名若是原本系统就有的字体名称，会造成覆盖</p>
+<h4 id="二、利用-font-face制作像字体一样使用的icon"><a href="#二、利用-font-face制作像字体一样使用的icon" class="headerlink" title="二、利用@font-face制作像字体一样使用的icon"></a>二、利用<code>@font-face</code>制作像字体一样使用的icon</h4><ul>
+<li><p><a href="https://icomoon.io/" target="_blank" rel="noopener">需要用到的网站</a><br>  1）打开网站点击右上角<code>IcoMoon App</code><br>  2）点击左上角<code>Import Icons</code>导入自己的<code>svg</code>图标， 或者选择下面已经有的图标<br>  3）点击选择一个或者多个图标后选择右下角<code>Generate Font</code><br>  4）可以设置每个图标的名字或者使用默认的名字，(此时点击图标处的<code>Get Code</code>可以看到相应的代码）<br>  6）点击右下角<code>Download</code>即可下载压缩包<br>  5）解压后把文件中的<code>fonts</code>一整个文件夹导入项目中<br>  6）在项目中使用，代码如下：</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">font-face</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">'heart'</span>;</span><br><span class="line">	<span class="attribute">src</span>:  <span class="built_in">url</span>(<span class="string">'./assets/fonts/icomoon.eot'</span>) <span class="built_in">format</span>(<span class="string">'eot'</span>),</span><br><span class="line">		  <span class="built_in">url</span>(<span class="string">'./assets/fonts/icomoon.ttf'</span>) <span class="built_in">format</span>(<span class="string">'truetype'</span>),</span><br><span class="line">		  <span class="built_in">url</span>(<span class="string">'./assets/fonts/icomoon.woff'</span>) <span class="built_in">format</span>(<span class="string">'woff'</span>),</span><br><span class="line">		  <span class="built_in">url</span>(<span class="string">'./assets/fonts/icomoon.svg'</span>) <span class="built_in">format</span>(<span class="string">'svg'</span>);</span><br><span class="line">	<span class="attribute">font-style</span>: normal;</span><br><span class="line">	<span class="attribute">font-weight</span>: normal;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.icon</span> &#123;</span><br><span class="line">	<span class="attribute">font-family</span>: <span class="string">'heart'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  使用的时候需要带上相应的类名（icon-设置的图标名或者默认的图标名）<br>  代码可以在网站的每个图标点击<code>Get Code</code>即可看见</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>  <span class="attr">class</span>=<span class="string">"icon icon-icon-heart"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon-icon-heart</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">"\66"</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#eb4f4f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  到此为止便完成了svg图标字体的制作，此时引入的图标可以像使用字体一样，可以通过修改<code>font-size</code>改变大小，通过<code>color</code>改变颜色等</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon-icon-heart</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="string">"\66"</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#e9eb4f</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/kidish-83">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1643945963">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/firstsmarts">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://kilimanjarol.github.io/">kilimanjarol</a></span>
+        <span>/</span>
+        
+        <span><a href="https://stackedit.io/">stackedit</a></span>
+        <span>/</span>
+        
+        <span><a href="https://knktc.com/">knktc</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://firstsmarts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

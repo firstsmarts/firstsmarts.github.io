@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="music coding life love">
+    <meta name="keyword" content="前端,kingsoft,javascript,python">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        思想养成篇-能少计算就少计算 - kidish的博客 | kidish&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>kidish</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        思想养成篇-能少计算就少计算
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-10-23 09:10:34</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#kilimanjaro" title="kilimanjaro">kilimanjaro</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="思想养成篇（一）-能少计算就少计算"><a href="#思想养成篇（一）-能少计算就少计算" class="headerlink" title="思想养成篇（一）  能少计算就少计算"></a>思想养成篇（一）  能少计算就少计算</h3><p>2018/10/22</p>
+<p><strong>kidish：js不是一个擅长计算密集型的语言 所以能减少计算就减少计算</strong><br>我：没反应过来，单纯记下了这句话<br>then：<br>一个计算文件从创建开始距今的时间的函数（n years /months/days/mimutes/seconds ago）</p>
+<h5 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码:"></a>我的代码:</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">timeToShow(createtime) &#123;</span><br><span class="line"><span class="keyword">var</span>  time  = [];</span><br><span class="line"><span class="keyword">var</span>  showTime  =  <span class="number">0</span>;</span><br><span class="line"><span class="keyword">var</span>  timestamp  =  <span class="built_in">Date</span>.parse(<span class="keyword">new</span>  <span class="built_in">Date</span>());</span><br><span class="line"><span class="keyword">var</span>  timeSub  =  timestamp  -  createtime  *  <span class="number">1000</span></span><br><span class="line"><span class="keyword">var</span>  years  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>  *  <span class="number">30</span>  *  <span class="number">365</span>))</span><br><span class="line"><span class="keyword">var</span>  months  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>  *  <span class="number">30</span>))</span><br><span class="line"><span class="keyword">var</span>  days  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>))</span><br><span class="line"><span class="keyword">var</span>  hours  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>))</span><br><span class="line"><span class="keyword">var</span>  minutes  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>))</span><br><span class="line"><span class="keyword">var</span>  seconds  =  <span class="built_in">parseInt</span>(timeSub  /  <span class="number">1000</span>)</span><br><span class="line">time.push(years, months, days, hours, minutes, seconds)</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span>  i  =  <span class="number">0</span>; i  &lt;  <span class="number">6</span>; i++)&#123;</span><br><span class="line">  <span class="keyword">if</span>(time[i] &gt;  <span class="number">0</span>)&#123;</span><br><span class="line">    showTime  =  time[i];</span><br><span class="line">    <span class="keyword">switch</span>(i)&#123;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">0</span> : showTime  =  showTime  +  <span class="string">'years ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">1</span> : showTime  =  showTime  +  <span class="string">'months ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">2</span> : showTime  =  showTime  +  <span class="string">'days ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">3</span> : showTime  =  showTime  +  <span class="string">'hours ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">4</span> : showTime  =  showTime  +  <span class="string">'mimutes ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	  <span class="keyword">case</span>  <span class="number">5</span> : showTime  =  showTime  +  <span class="string">'seconds ago'</span>; <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">  <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>  showTime;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h5 id="kidish的"><a href="#kidish的" class="headerlink" title="kidish的:"></a>kidish的:</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">fileter(sec)&#123;</span><br><span class="line">  <span class="keyword">let</span>  mincount  =  <span class="number">60</span></span><br><span class="line">  <span class="keyword">let</span>  hcount  =  <span class="number">3600</span></span><br><span class="line">  <span class="keyword">let</span>  dcount  =  <span class="number">86400</span></span><br><span class="line">  <span class="keyword">let</span>  mcount  =  <span class="number">2592000</span></span><br><span class="line">  <span class="keyword">let</span>  ycount  =  <span class="number">31104000</span></span><br><span class="line">  <span class="keyword">let</span>  cur  = (<span class="keyword">new</span>  <span class="built_in">Date</span>()).getTime() /  <span class="number">1000</span></span><br><span class="line">  <span class="keyword">let</span>  cha  =  <span class="built_in">parseInt</span>(cur  -  sec)</span><br><span class="line">  <span class="keyword">let</span>  cache  = &#123;&#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(cache.chay  =  cha  /  ycount) &amp;&amp;  cache.chay  &gt;=  <span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.year'</span>,</span><br><span class="line">	  args:&#123;</span><br><span class="line">	    num:  <span class="built_in">parseInt</span>(cache.chay)</span><br><span class="line">	  &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span>  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(cache.cham  =  cha  /  mcount) &amp;&amp;  cache.cham  &gt;=  <span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.month'</span>,</span><br><span class="line">	  args: &#123;</span><br><span class="line">		num:  <span class="built_in">parseInt</span>(cache.cham)</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125; <span class="keyword">else</span>  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(cache.chad  =  cha  /  dcount) &amp;&amp;  cache.chad  &gt;=  <span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.day'</span>,</span><br><span class="line">	  args: &#123;</span><br><span class="line">	    num:  <span class="built_in">parseInt</span>(cache.chad)</span><br><span class="line">	  &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span>  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(cache.chah  =  cha  /  hcount) &amp;&amp;  cache.chah  &gt;=  <span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.hour'</span>,</span><br><span class="line">	  args: &#123;</span><br><span class="line">		num:  <span class="built_in">parseInt</span>(cache.chah)</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125; <span class="keyword">else</span>  <span class="keyword">if</span> (<span class="built_in">Boolean</span>(cache.chami  =  cha  /  mincount) &amp;&amp;  cache.chami  &gt;=  <span class="number">1</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.min'</span>,</span><br><span class="line">	  args: &#123;</span><br><span class="line">		num:  <span class="built_in">parseInt</span>(cache.chami)</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> &#123;</span><br><span class="line">	  path:  <span class="string">'time.sec'</span>,</span><br><span class="line">	  args: &#123;</span><br><span class="line">		num:  cha</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>看见这段的时候就恍然大悟，真的是反应力太差</p>
+<ul>
+<li><code>(1000  *  60  *  60  *  24  *  30  *  365)</code>类似于这种可以自行计算的，就不应该再让程序来替我们计算~</li>
+<li>鉴于这个函数要显示的结果是有year就不显示month，有month就不显示day… 所以我先前写的<code>每个数据都计算出来，再判断显示哪个</code>的思路 VS <code>从year开始计算，一旦&gt;1就不再往下计算</code>，显然后者可以达到缩减计算量的目的。</li>
+</ul>
+<p><strong>So——思想养成：<br>    能少计算就少计算<br>    能少计算就少计算<br>    能少计算就少计算</strong></p>
+<p><a href="https://www.cnblogs.com/cnblogs-jcy/p/5654351.html" target="_blank" rel="noopener">一个有点相关又不大相关的参考</a><br><a href="https://blog.csdn.net/weixin_38055381/article/details/82420661" target="_blank" rel="noopener">编译型语言VS解释型语言</a></p>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/kidish-83">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1643945963">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/firstsmarts">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://kilimanjarol.github.io/">kilimanjarol</a></span>
+        <span>/</span>
+        
+        <span><a href="https://stackedit.io/">stackedit</a></span>
+        <span>/</span>
+        
+        <span><a href="https://knktc.com/">knktc</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://firstsmarts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

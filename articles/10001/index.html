@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="music coding life love">
+    <meta name="keyword" content="前端,kingsoft,javascript,python">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        vue学习笔记 - kidish的博客 | kidish&#39;s Blog
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/img/avatar.jpg">
+        </div>
+        <div class="name">
+            <i>kidish</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li>
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input">
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i> I MEET YOU,TREASURE YOU, LOVE YOU, EVEN, I MISS YOU ... </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        vue学习笔记
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2018-10-22 16:01:34</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#kilimanjaro" title="kilimanjaro">kilimanjaro</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h3 id="vueNotes-2018-10-2-2018-10-19"><a href="#vueNotes-2018-10-2-2018-10-19" class="headerlink" title="vueNotes (2018/10/2~2018/10/19)"></a>vueNotes (2018/10/2~2018/10/19)</h3><h4 id="1-Vue-js文档学习"><a href="#1-Vue-js文档学习" class="headerlink" title="1.Vue.js文档学习"></a>1.Vue.js文档学习</h4><ul>
+<li>生命周期函数：beforeCreated/ created/ boforeMount/ mounted/ beforeUpdate/ updated/ beforeDertroy/ destroyed/<br><br>! 不要在选项属性上或回调函数上使用箭头函数，因为箭头函数是和父级上下文绑定在一起的  </li>
+<li>V-html 可以输出真正的HTML，而双花括号会将数据解释为普通文本，所以需要注意：站点上动态渲染的HTML可能会比较危险，容易导致XSS攻击  </li>
+<li>v-on简写为<code>@XXX=&quot;YYY&quot;</code> v-bind简写为<code>:XXX=&quot;YYY&quot;</code>  </li>
+<li>Vue Router ($router 路由对象)  </li>
+</ul>
+<ul>
+<li><code>$router.path</code>: 当前路由的路径  </li>
+<li><code>$router.params</code>: key/value(object)  </li>
+<li><code>$router.query</code>: URL查询参数、key/value(object)  </li>
+</ul>
+<h4 id="2-环境安装、项目搭建"><a href="#2-环境安装、项目搭建" class="headerlink" title="2.环境安装、项目搭建"></a>2.环境安装、项目搭建</h4><ul>
+<li>注意node.js环境变量的配置就好  </li>
+<li>初始项目搭建： <a href="https://www.jianshu.com/p/1626b8643676" target="_blank" rel="noopener">参考步骤</a>，了解框架的文件结构  <h4 id="3-代码练习"><a href="#3-代码练习" class="headerlink" title="3.代码练习"></a>3.代码练习</h4>Q：路由配置问题：<router-view>理解不当，页面重复出现<br>S：只有在需要的地方写，不能每个组件都写上这个  </router-view></li>
+</ul>
+<hr>
+<p>Q:  出现页面的滚动条问题<br>S：理解和使用box-sizing属性，通过设置 box-sizing: border-box；改变盒模型来调整布局解决滚动条问题。  </p>
+<hr>
+<p>Q: menu选中状态设置问题，当刷新时，路由因为设置跳转可以保持原路由，但是menu菜单的选中项会变成默认的设置项（default-active）<br>S:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"menu-content"</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">el-menu</span> <span class="attr">:default-active</span>=<span class="string">"$route.path"</span> <span class="attr">class</span>=<span class="string">"el-menu-vertical-demo"</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/myCloud"</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">el-menu-item</span> <span class="attr">:index</span>=<span class="string">"`/myCloud`"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"el-icon-document"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"title"</span> <span class="attr">class</span>=<span class="string">"menu-title"</span>&gt;</span>My Cloud<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-menu-item</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/recycle"</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;<span class="name">el-menu-item</span> <span class="attr">:index</span>=<span class="string">"`/recycle`"</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"el-icon-delete"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">slot</span>=<span class="string">"title"</span> <span class="attr">class</span>=<span class="string">"menu-title"</span>&gt;</span>Recycle Bin<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>  </span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-menu-item</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">router-link</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">el-menu</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>//将default-active设为当前的路径，而index设置为相应的路径,注意你之前使用的是go(‘path’)的方法设置跳转，建议不用，用<router-link to="path">来替代  </router-link></p>
+<hr>
+<p>Q: 列表的hover、selected、之间状态转换效果的实现<br>S:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.list-item</span> <span class="selector-pseudo">:hover</span>&#123;  </span><br><span class="line"><span class="attribute">background</span>: <span class="number">#f6f6f6</span>;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="selector-class">.list-item-row</span><span class="selector-class">.selected</span>&#123;  </span><br><span class="line"><span class="attribute">background</span>: <span class="number">#f4f8ff</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过不同的时候的样式来进行切换，hover才显示的可以设置display：none/block来切换，而selected是通过vue绑定类名的方式来设置不同样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"list-item-row"</span> <span class="attr">:class</span>=<span class="string">"&#123; selected: checked, clickedMore:clickedMore &#125;"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="https://cn.vuejs.org/v2/guide/class-and-style.html" target="_blank" rel="noopener">class与style绑定</a>  </p>
+<hr>
+<p>Q: 列表如果使用v-for实现的话，会共用一个判断状态，致使列表所有Item的状态共同变化<br>S: 养成独立思想：把每一个ListItem写成一个组件，这样每一个item就能拥有独立的状态控制  </p>
+<hr>
+<p>Q: 父组件与子组件之间的传值<br>S: 父组件向子组件传值：<br>子组件在props中接受，而父组件在调用子组件的时候通过 ‘：XXX=YYY’的形式传递，如：<br>子组件中：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">props:[<span class="string">'id'</span>,<span class="string">'filename'</span>,<span class="string">'filesize'</span>,<span class="string">'updatetime'</span>,<span class="string">'checkModel'</span>],</span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string">父组件中：  </span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>html</span><br><span class="line">&lt;fileCreateBox :fileType=<span class="string">"this.fileType1"</span> :dialogVisible=<span class="string">"this.dialogVisible1"</span> @closeBox=<span class="string">"dialogVisible1 = false"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">fileCreateBox</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p>子组件向父组件传值：<br><code>this.$emit()</code>函数：把事件沿着作用域链向上派送，作用是触发自定义事件<br><code>this.$emit(event,要传给父组件的值）</code>例如：<br>子组件中：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.$emit(<span class="string">'deleteCheck'</span>,<span class="keyword">this</span>.id)</span><br></pre></td></tr></table></figure></p>
+<p>父组件中：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ListItem</span> @<span class="attr">deleteCheck</span>=<span class="string">"deleteCheckItem"</span>&gt;</span><span class="tag">&lt;/<span class="name">ListItem</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>然后再methods中定义相关的方法：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deleteCheckItem(id)&#123;  </span><br><span class="line"><span class="keyword">this</span>.checkModel.splice(<span class="keyword">this</span>.checkModel.indexOf(id),<span class="number">1</span>);  </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://blog.csdn.net/sllailcp/article/details/78595077" target="_blank" rel="noopener">this.$emit()</a>  </p>
+<hr>
+<p>Q:全选和单选的实现<br>S:思路：主要利用v-model，用一个数组记录被选中的id,然后在子组件ListItem中判断此item的id是否在数组中，从而改变其选中/不选中的状态，主要代码如下：  </p>
+<p>父组件：v-model=”checkedAll”<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;  </span><br><span class="line">checkedAll: &#123;  </span><br><span class="line">get()&#123;<span class="keyword">return</span> (<span class="keyword">this</span>.checkModel.length == <span class="keyword">this</span>.files.length)&#125;,  </span><br><span class="line">  set()&#123;  </span><br><span class="line">    <span class="keyword">if</span>(!<span class="keyword">this</span>.checkedAll)&#123;  </span><br><span class="line">      <span class="keyword">this</span>.checkModel = []  </span><br><span class="line">      <span class="keyword">this</span>.files.forEach(<span class="function">(<span class="params">value,index</span>)=&gt;</span>&#123;  </span><br><span class="line">      <span class="keyword">this</span>.checkModel.push(value.id);  </span><br><span class="line">    &#125;);  </span><br><span class="line">   &#125;<span class="keyword">else</span>&#123;  </span><br><span class="line">     <span class="keyword">this</span>.checkModel = []  </span><br><span class="line">   &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line"> &#125;,  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>子组件：v-model=”checked”<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">computed:&#123;  </span><br><span class="line">checked:&#123;  </span><br><span class="line">  get()&#123;<span class="keyword">return</span> (<span class="keyword">this</span>.checkModel.indexOf(<span class="keyword">this</span>.id) &gt; <span class="number">-1</span>)&#125;,  </span><br><span class="line">  set()&#123;  </span><br><span class="line">    <span class="keyword">this</span>.checked ? <span class="keyword">this</span>.$emit(<span class="string">'deleteCheck'</span>,<span class="keyword">this</span>.id) : <span class="keyword">this</span>.$emit(<span class="string">'addCheck'</span>,<span class="keyword">this</span>.id)  </span><br><span class="line">  &#125;  </span><br><span class="line"> &#125;,  </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>!!!不能直接改变props的值，也不能直接改变computed属性的值，所以当需要改变其值时，要利用computed中的setter函数实现，通过改变它的依赖来改变它自身的值  </p>
+<p>！！！<strong>不能滥用<code>watch</code></strong>,而是需要使用<code>computed</code>属性替代<br><br><a href="https://cn.vuejs.org/v2/guide/computed.html" target="_blank" rel="noopener">计算属性</a><br>watch computed 两者均可以观察页面的数据变化，但是computed只在相关的数据发生变化的时候才会改变它的值，存在缓存，而watch每一次都会执行函数，所以要养成一个思想：<strong>computed属性要多用，watch不要滥用，目前还没看见该使用它的场合，有待研究</strong>  </p>
+<hr>
+<p>Q:点击列表上的按钮的时候，列表本身的click事件也会被触发<br>S:事件冒泡/阻止冒泡/事件捕获/阻止捕获相关知识  </p>
+<ul>
+<li>event.stopPropagation() 除IE外的浏览器使用  </li>
+<li>event.cancelBubble = true IE下才起作用，所以上述两个结合使用  </li>
+<li>直接在click事件添加.stop：@click.stop = “changeState”  </li>
+<li>event.preventDefault(),不阻止事件冒泡，阻止默认行为  </li>
+<li>return flase的方法，阻止冒泡和默认  </li>
+</ul>
+<hr>
+<p>Q:点击整个页面除指定区域外的某个地方，改变一个状态地方法<br>S:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mounted:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">  <span class="keyword">var</span> _this = <span class="keyword">this</span>  </span><br><span class="line">  <span class="built_in">document</span>.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">let</span> flag = e.target.contains(<span class="built_in">document</span>.getElementsByClassName(<span class="string">'file-action'</span>)[<span class="number">0</span>])  </span><br><span class="line">    <span class="keyword">if</span>(!flag) &#123;  </span><br><span class="line">      <span class="keyword">return</span> _this.clickedMore = <span class="literal">false</span>  </span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;)  </span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></p>
+<p>利用addEventListener添加全局点击事件，把指定区域用(id)选中，取反，注意<br>var _this = this 的this的绑定(理由暂时没研究出来，但是不这么写不会起作用)<br><strong>this的指向问题</strong><br><code>this</code> 指向并不是在函数定义的时候确定的，而是在调用的时候确定的<br><strong>函数的调用方式决定了  <code>this</code>  指向</strong></p>
+<ul>
+<li>直接调用(window)、注意 <code>bind()</code> 的影响、<code>call</code>和 <code>apply</code>的影响（this指向传入函数的第一个参数）</li>
+<li>方法调用（指向调用该方法的对象）</li>
+<li>调用事件处理函数的时候，<code>this</code> 指向会绑定到触发事件的 DOM 元素上（可用<code>var _this = this</code>或<code>bind</code>或<code>箭头函数</code>来解决这一问题）</li>
+<li>new调用（新创建的函数）</li>
+<li><strong>箭头函数中的 this</strong>： 箭头函数没有自己的 <code>this</code> 绑定。箭头函数中使用的 <code>this</code>，其实是直接包含它的那个函数或函数表达式中的 <code>this</code><strong>箭头函数是根据外层（函数或者全局）作用域来决定this</strong><br>箭头函数不会绑定<code>this</code>， 或则说箭头函数不会改变<code>this</code>本来的绑定，所以call()、apply()、bind()这些方法不会改变this的指向</li>
+</ul>
+<p><strong><a href="https://segmentfault.com/a/1190000008400124" target="_blank" rel="noopener">参考学习</a></strong></p>
+<hr>
+<p>距离建立时间距今的显示：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">timeToShow(createtime) &#123;  </span><br><span class="line"><span class="keyword">var</span> time = [];  </span><br><span class="line"><span class="keyword">var</span> showTime = <span class="number">0</span>;  </span><br><span class="line"><span class="keyword">var</span> timestamp = <span class="built_in">Date</span>.parse(<span class="keyword">new</span> <span class="built_in">Date</span>());  </span><br><span class="line"><span class="keyword">var</span> timeSub = timestamp - createtime*<span class="number">1000</span>  </span><br><span class="line"><span class="keyword">var</span>  years  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>  *  <span class="number">30</span>  *  <span class="number">365</span>))</span><br><span class="line"><span class="keyword">var</span>  months  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>  *  <span class="number">30</span>))</span><br><span class="line"><span class="keyword">var</span>  days  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>  *  <span class="number">24</span>))</span><br><span class="line"><span class="keyword">var</span>  hours  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>  *  <span class="number">60</span>))</span><br><span class="line"><span class="keyword">var</span>  minutes  =  <span class="built_in">parseInt</span>(timeSub  / (<span class="number">1000</span>  *  <span class="number">60</span>))</span><br><span class="line"><span class="keyword">var</span>  seconds  =  <span class="built_in">parseInt</span>(timeSub  /  <span class="number">1000</span>)  </span><br><span class="line">time.push(years, months, days, hours, minutes, seconds)  </span><br><span class="line"><span class="comment">// console.log(time)  </span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++)&#123;  </span><br><span class="line">  <span class="keyword">if</span>(time[i] &gt; <span class="number">0</span>)&#123;  </span><br><span class="line">    showTime = time[i];  </span><br><span class="line">    <span class="keyword">switch</span>(i)&#123;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">0</span> : showTime = showTime + <span class="string">'years ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">1</span> : showTime = showTime + <span class="string">'months ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">2</span> : showTime = showTime + <span class="string">'days ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">3</span> : showTime = showTime + <span class="string">'hours ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">4</span> : showTime = showTime + <span class="string">'mimutes ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">      <span class="keyword">case</span> <span class="number">5</span> : showTime = showTime + <span class="string">'seconds ago'</span>; <span class="keyword">break</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">  <span class="keyword">break</span>;  </span><br><span class="line">  &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">return</span> showTime;  </span><br><span class="line">&#125;  </span><br><span class="line">有待优化</span><br></pre></td></tr></table></figure></p>
+<p>！时间戳与日期的互相转换  </p>
+<hr>
+<h4 id="4、other"><a href="#4、other" class="headerlink" title="4、other"></a>4、other</h4><ul>
+<li>input去掉点击时候的默认蓝框框的方法：<br>style = “outline:none”  </li>
+<li><a href="http://element-cn.eleme.io/#/" target="_blank" rel="noopener">element.ui组件库</a>  </li>
+<li>label for属性  </li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/kidish-83">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+        <li>
+            <a target="_blank" href="http://weibo.com/1643945963">
+                            <span class="fa-stack fa-lg">
+                                  <i class="iconfont icon-weibo"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+        <li>
+            <a target="_blank" href="https://github.com/firstsmarts">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span>/</span>
+        
+        <span><a href="https://kilimanjarol.github.io/">kilimanjarol</a></span>
+        <span>/</span>
+        
+        <span><a href="https://stackedit.io/">stackedit</a></span>
+        <span>/</span>
+        
+        <span><a href="https://knktc.com/">knktc</a></span>
+        <span>/</span>
+        
+    </p>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://firstsmarts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+
+
+
+</html>

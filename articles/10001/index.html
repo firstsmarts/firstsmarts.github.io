@@ -283,14 +283,19 @@
 
 
 </body>
-
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
 <script>
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
     window.isPost = true
+    if (/debug=true/.test(location.href) && localStorage.getItem('debug')) {
+        eruda.init()
+    }
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 

@@ -304,7 +304,7 @@
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
     window.isPost = true
-    if (/debug=true/.test(location.href) && localStorage.getItem('debug')) {
+    if (/debug=true/.test(location.href)) {
         eruda.init()
     }
 </script>
